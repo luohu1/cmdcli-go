@@ -10,6 +10,13 @@ var rootCmd = &cobra.Command{
 	Long:  `CmdCli is a command line tool based on go language.`,
 }
 
+func init() {
+	rootCmd.AddCommand(
+		NewVersionCmd(),
+		NewCompletionCmd(),
+	)
+}
+
 func Execute() error {
 	return rootCmd.Execute()
 }
