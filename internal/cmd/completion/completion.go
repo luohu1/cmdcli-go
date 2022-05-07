@@ -6,19 +6,19 @@ import (
 	"github.com/spf13/cobra"
 )
 
-func NewCompletionCmd() *cobra.Command {
-	cc := &cobra.Command{
+func NewCmdCompletion() *cobra.Command {
+	cmd := &cobra.Command{
 		Use:   "completion",
 		Short: "Generate shell completion",
 	}
 
-	cc.AddCommand(newBashCompletionCmd())
-	cc.AddCommand(newZshCompletionCmd())
+	cmd.AddCommand(newCmdBashCompletion())
+	cmd.AddCommand(newCmdZshCompletion())
 
-	return cc
+	return cmd
 }
 
-func newBashCompletionCmd() *cobra.Command {
+func newCmdBashCompletion() *cobra.Command {
 	return &cobra.Command{
 		Use:   "bash",
 		Short: "Generate bash completion",
@@ -29,7 +29,7 @@ func newBashCompletionCmd() *cobra.Command {
 	}
 }
 
-func newZshCompletionCmd() *cobra.Command {
+func newCmdZshCompletion() *cobra.Command {
 	return &cobra.Command{
 		Use:   "zsh",
 		Short: "Generate zsh completion",
