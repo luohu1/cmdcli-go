@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/luohu1/cmdcli-go/internal/cmd"
+	"github.com/luohu1/glctl/internal/cmd"
 )
 
 func main() {

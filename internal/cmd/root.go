@@ -1,19 +1,21 @@
 package cmd
 
 import (
+	"github.com/luohu1/glctl/internal/cmd/completion"
+	"github.com/luohu1/glctl/internal/cmd/version"
 	"github.com/spf13/cobra"
 )
 
 var rootCmd = &cobra.Command{
-	Use:   "cmdcli",
-	Short: "A command line tool.",
-	Long:  `CmdCli is a command line tool based on go language.`,
+	Use:   "glctl",
+	Short: "Gitlab command line tool.",
+	Long:  `glctl is a command line tool to manage gitlab.`,
 }
 
 func init() {
 	rootCmd.AddCommand(
-		NewVersionCmd(),
-		NewCompletionCmd(),
+		completion.NewCompletionCmd(),
+		version.NewVersionCmd(),
 	)
 }
 

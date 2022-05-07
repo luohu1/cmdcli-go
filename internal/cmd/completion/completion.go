@@ -1,4 +1,4 @@
-package cmd
+package completion
 
 import (
 	"os"
@@ -23,6 +23,7 @@ func newBashCompletionCmd() *cobra.Command {
 		Use:   "bash",
 		Short: "Generate bash completion",
 		Run: func(cmd *cobra.Command, args []string) {
+			rootCmd := cmd.Parent()
 			rootCmd.GenBashCompletion(os.Stdout)
 		},
 	}
@@ -33,6 +34,7 @@ func newZshCompletionCmd() *cobra.Command {
 		Use:   "zsh",
 		Short: "Generate zsh completion",
 		Run: func(cmd *cobra.Command, args []string) {
+			rootCmd := cmd.Parent()
 			rootCmd.GenZshCompletion(os.Stdout)
 		},
 	}

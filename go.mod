@@ -1,4 +1,4 @@
-module github.com/luohu1/cmdcli-go
+module github.com/luohu1/glctl
 
 go 1.18
 
