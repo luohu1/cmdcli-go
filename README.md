@@ -1,5 +1,5 @@
-# glctl
+# osctl
 
-[![GitHub License](https://img.shields.io/github/license/luohu1/glctl)](https://github.com/luohu1/glctl/blob/master/LICENSE)
+[![GitHub License](https://img.shields.io/github/license/luohu1/osctl)](https://github.com/luohu1/osctl/blob/master/LICENSE)
 
-Gitlab command line tools
+A command line tool for OS management.
